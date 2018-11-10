@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
+# Name:        Emotion Recognition Using Facial Expressions with CNNs
 # Purpose:
 #
 # Author:      sivaprasadrb
@@ -18,3 +18,6 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
 from keras import optimizers
+
+import numpy as np
+import matplotlib.pyplot as plt
