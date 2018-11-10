@@ -23,3 +23,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 data_path = './dataset/'
+
+imgs = np.empty((256, 256), int)
+
+filenames = sorted(os.listdir(data_path))
