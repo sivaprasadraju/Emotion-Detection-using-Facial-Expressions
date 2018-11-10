@@ -49,3 +49,5 @@ print('Training data shape : ', train_images.shape, len(train_labels))
 print('Testing data shape : ', test_images.shape, len(test_labels))
 
 classes = np.unique(train_labels)
+classes=np.append(classes,0)
+nClasses = len(classes)
