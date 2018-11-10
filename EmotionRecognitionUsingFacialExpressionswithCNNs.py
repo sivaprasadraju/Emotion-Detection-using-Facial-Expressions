@@ -74,3 +74,6 @@ input_shape = (nRows, nCols, 1)
 
 train_data = train_data.astype('float32')
 test_data = test_data.astype('float32')
+
+train_data /= 255
+test_data /= 255
