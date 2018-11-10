@@ -59,3 +59,7 @@ plt.figure(figsize=[4,2])
 plt.subplot(121)
 plt.imshow(train_images[0,:,:], cmap='gray')
 plt.title("Ground Truth : {}".format(train_labels[0]))
+
+plt.subplot(122)
+plt.imshow(test_images[0,:,:], cmap='gray')
+plt.title("Ground Truth : {}".format(test_labels[0]))
