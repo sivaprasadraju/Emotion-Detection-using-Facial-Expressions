@@ -71,3 +71,6 @@ print(nCols)
 train_data = train_images.reshape(train_images.shape[0], nRows, nCols, 1)
 test_data = test_images.reshape(test_images.shape[0], nRows, nCols, 1)
 input_shape = (nRows, nCols, 1)
+
+train_data = train_data.astype('float32')
+test_data = test_data.astype('float32')
