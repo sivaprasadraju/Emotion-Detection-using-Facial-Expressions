@@ -42,3 +42,9 @@ for img_name in filenames:
 imgs = np.reshape(imgs, [ 445, 256, 256])
 
 train_images, test_images, train_labels, test_labels = train_test_split(imgs, classificationLabels, test_size=0.33, random_state=42)
+
+from keras.utils import to_categorical
+
+print('Training data shape : ', train_images.shape, len(train_labels))
+print('Testing data shape : ', test_images.shape, len(test_labels))
+
