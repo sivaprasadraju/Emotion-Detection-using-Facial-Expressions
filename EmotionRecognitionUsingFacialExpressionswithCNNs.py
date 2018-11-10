@@ -152,3 +152,30 @@ historyIncludingDataAugumentation = modelIncludingDataAugumentation.fit_generato
 
 modelIncludingDataAugumentation.evaluate(test_data, test_labels_one_hot)
 
+plt.figure(figsize=[8,6])
+plt.plot(historyIncludingDataAugumentation.history['loss'],'r',linewidth=3.0)
+plt.plot(historyIncludingDataAugumentation.history['val_loss'],'b',linewidth=3.0)
+plt.legend(['Training loss', 'Validation Loss'],fontsize=18)
+plt.xlabel('Epochs ',fontsize=16)
+plt.ylabel('Loss',fontsize=16)
+plt.title('Loss Curves',fontsize=16)
+
+
+
+plt.figure(figsize=[8,6])
+plt.plot(history.history['acc'],'r',linewidth=3.0)
+plt.plot(history.history['val_acc'],'b',linewidth=3.0)
+plt.legend(['Training Accuracy', 'Validation Accuracy'],fontsize=18)
+plt.xlabel('Epochs ',fontsize=16)
+plt.ylabel('Accuracy',fontsize=16)
+plt.title('Accuracy Curves',fontsize=16)
+
+
+
+plt.figure(figsize=[8,6])
+plt.plot(historyIncludingDataAugumentation.history['acc'],'r',linewidth=3.0)
+plt.plot(historyIncludingDataAugumentation.history['val_acc'],'b',linewidth=3.0)
+plt.legend(['Training Accuracy', 'Validation Accuracy'],fontsize=18)
+plt.xlabel('Epochs ',fontsize=16)
+plt.ylabel('Accuracy',fontsize=16)
+plt.title('Accuracy Curves',fontsize=16)
