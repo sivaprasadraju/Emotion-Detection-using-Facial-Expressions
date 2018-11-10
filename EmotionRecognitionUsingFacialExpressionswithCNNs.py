@@ -77,3 +77,6 @@ test_data = test_data.astype('float32')
 
 train_data /= 255
 test_data /= 255
+
+print(len(train_labels))
+print(len(test_labels))
