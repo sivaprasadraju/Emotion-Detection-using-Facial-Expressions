@@ -21,3 +21,5 @@ from keras import optimizers
 
 import numpy as np
 import matplotlib.pyplot as plt
+
+data_path = './dataset/'
