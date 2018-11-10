@@ -48,3 +48,4 @@ from keras.utils import to_categorical
 print('Training data shape : ', train_images.shape, len(train_labels))
 print('Testing data shape : ', test_images.shape, len(test_labels))
 
+classes = np.unique(train_labels)
