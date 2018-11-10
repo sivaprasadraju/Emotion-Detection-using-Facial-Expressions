@@ -109,3 +109,11 @@ def createModel():
     model.add(Dense(nClasses, activation='softmax'))
 
     return model
+
+model = createModel()
+batch_size = 10
+epochs = 20
+sgd = optimizers.SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
+
+model.summary()
