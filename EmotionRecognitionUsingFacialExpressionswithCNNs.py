@@ -27,3 +27,18 @@ data_path = './dataset/'
 imgs = np.empty((256, 256), int)
 
 filenames = sorted(os.listdir(data_path))
+
+classificationLabels = []
+count = 0
+for img_name in filenames:
+    img = plt.imread(data_path + img_name)
+    img  = np.resize(img, (256, 256))
+    if p == 0:
+	imgs = (img)
+	classificationLabels = 1
+    else:
+    	imgs = np.append(imgs, img, axis=0)
+    classificationLabels.append(int(img_name[1]))
+imgs = np.reshape(imgs, [ 445, 256, 256])
+
+train_images, test_images, train_labels, test_labels = train_test_split(imgs, classificationLabels, test_size=0.33, random_state=42)
