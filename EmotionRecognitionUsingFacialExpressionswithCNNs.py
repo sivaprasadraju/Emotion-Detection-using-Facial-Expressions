@@ -142,3 +142,13 @@ datagen = ImageDataGenerator(
         height_shift_range=0.1,
         horizontal_flip=True,
         vertical_flip=False)
+
+
+historyIncludingDataAugumentation = modelIncludingDataAugumentation.fit_generator(datagen.flow(train_data, train_labels_one_hot, batch_size=batch_size),
+                              steps_per_epoch=int(np.ceil(train_data.shape[0] / float(batch_size))),
+                              epochs=epochs,
+                              validation_data=(test_data, test_labels_one_hot),
+                              workers=4)
+
+modelIncludingDataAugumentation.evaluate(test_data, test_labels_one_hot)
+
