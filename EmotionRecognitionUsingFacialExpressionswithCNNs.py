@@ -131,3 +131,8 @@ plt.ylabel('Loss',fontsize=16)
 plt.title('Loss Curves',fontsize=16)
 
 modelIncludingDataAugumentation = createModel()
+
+modelIncludingDataAugumentation.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
+
+batch_size = 256
+epochs = 20
