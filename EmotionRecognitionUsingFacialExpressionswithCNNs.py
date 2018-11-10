@@ -136,3 +136,9 @@ modelIncludingDataAugumentation.compile(optimizer='rmsprop', loss='categorical_c
 
 batch_size = 256
 epochs = 20
+
+datagen = ImageDataGenerator(
+        width_shift_range=0.1,
+        height_shift_range=0.1,
+        horizontal_flip=True,
+        vertical_flip=False)
