@@ -117,3 +117,7 @@ sgd = optimizers.SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
 
 model.summary()
+
+print(len(train_labels_one_hot))
+history = model.fit(train_data, train_labels_one_hot, batch_size=batch_size, epochs=epochs, verbose=1,validation_data=(test_data, test_labels_one_hot))
+model.evaluate(test_data, test_labels_one_hot)
