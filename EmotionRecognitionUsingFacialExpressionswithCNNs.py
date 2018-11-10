@@ -83,3 +83,6 @@ print(len(test_labels))
 
 train_labels_one_hot = to_categorical(train_labels)
 test_labels_one_hot = to_categorical(test_labels)
+
+print(type(train_labels_one_hot))
+print(type(train_labels))
